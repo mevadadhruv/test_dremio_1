@@ -202,59 +202,59 @@ executor:
     volumes:
       - size: 100Gi
 
-  # These values, when defined and not empty, override the provided shared annotations, labels, node selectors, or tolerations.
-  # Uncomment only if you are trying to override the chart's shared values.
-  #annotations: {}
-  #podAnnotations: {}
-  #labels: {}
-  #podLabels: {}
-  #nodeSelector: {}
-  #tolerations: []
-  # Engine Overrides
-  #
-  # The settings above are overridable on a per-engine basis. These
-  # values here will take precedence and *override* the configured values
-  # on a per-engine basis. Engine overrides are matched with the name in the above
-  # list of engines.
-  #
-  # Special per-engine parameters:
-  # volumeClaimName: For each engine, you can optionally specify a value for the volume claim name,
-  #   this value must be unique to each engine or may cause unintended consequences. This value is
-  #   primarily intended for transitioning an existing single engine to a multi-engine configuration
-  #   where there may already have been existing persistent volumes.
-  #
-  # The below example shows all valid options that can be overridden on a per-engine basis.
-  # engineOverride:
-  #   engineNameHere:
-  #     cpu: 1
-  #     memory: 122800
-  #
-  #     count: 1
-  #
-  #     annotations: {}
-  #     podAnnotations: {}
-  #     labels: {}
-  #     podLabels: {}
-  #     nodeSelector: {}
-  #     tolerations: []
-  #
-  #     serviceAccount: ""
-  #
-  #     extraStartParams: >-
-  #       -DsomeCustomKey=someCustomValue
-  #
-  #     extraInitContainers: |
-  #       - name: extra-init-container
-  #         image: {{ $.Values.image }}:{{ $.Values.imageTag }}
-  #         command: ["echo", "Hello World"]
-  #
-  #
-  #     extraVolumes: []
-  #     extraVolumeMounts: []
-  #
-      volumeSize: 50Gi
-      storageClass: managed-premium
-      volumeClaimName: dremio-default-executor-volume
+    # These values, when defined and not empty, override the provided shared annotations, labels, node selectors, or tolerations.
+    # Uncomment only if you are trying to override the chart's shared values.
+    #annotations: {}
+    #podAnnotations: {}
+    #labels: {}
+    #podLabels: {}
+    #nodeSelector: {}
+    #tolerations: []
+    # Engine Overrides
+    #
+    # The settings above are overridable on a per-engine basis. These
+    # values here will take precedence and *override* the configured values
+    # on a per-engine basis. Engine overrides are matched with the name in the above
+    # list of engines.
+    #
+    # Special per-engine parameters:
+    # volumeClaimName: For each engine, you can optionally specify a value for the volume claim name,
+    #   this value must be unique to each engine or may cause unintended consequences. This value is
+    #   primarily intended for transitioning an existing single engine to a multi-engine configuration
+    #   where there may already have been existing persistent volumes.
+    #
+    # The below example shows all valid options that can be overridden on a per-engine basis.
+    # engineOverride:
+    #   engineNameHere:
+    #     cpu: 1
+    #     memory: 122800
+    #
+    #     count: 1
+    #
+    #     annotations: {}
+    #     podAnnotations: {}
+    #     labels: {}
+    #     podLabels: {}
+    #     nodeSelector: {}
+    #     tolerations: []
+    #
+    #     serviceAccount: ""
+    #
+    #     extraStartParams: >-
+    #       -DsomeCustomKey=someCustomValue
+    #
+    #     extraInitContainers: |
+    #       - name: extra-init-container
+    #         image: {{ $.Values.image }}:{{ $.Values.imageTag }}
+    #         command: ["echo", "Hello World"]
+    #
+    #
+    #     extraVolumes: []
+    #     extraVolumeMounts: []
+    #
+    # volumeSize: 50Gi
+    # storageClass: managed-premium
+    # volumeClaimName: dremio-default-executor-volume
   #
   #     cloudCache:
   #       enabled: true
